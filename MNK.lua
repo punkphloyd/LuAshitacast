@@ -158,8 +158,8 @@ local sets = {
 	
 	Chakra_Priority = {
 		Body = {'Temple Cyclas', 'Custom Tunic'},
-		Ring1 = 'Verve Ring',
-		Ring2 = 'Verve Ring',
+		Ring1 = 'Vigor Ring',
+		Ring2 = 'Vigor Ring',
 		Waist = 'Warrior\'s Belt +1',
 		Legs = 'Republic Subligar',
 	},
