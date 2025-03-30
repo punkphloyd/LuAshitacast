@@ -1,3 +1,5 @@
+-- Test branch for advanced accuracy treatment in MNK.lua
+--
 local profile = {};
 
 local varhelper = gFunc.LoadFile('common/varhelper.lua');
