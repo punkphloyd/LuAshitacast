@@ -156,6 +156,38 @@ local sets = {
 	
 	},
 	
+	DragonKick_Priority = {
+		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Ear1 = 'Tor. Earring +1',
+		Ear2 = 'Tor. Earring +1',
+		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
+		Hands = {'Pallas\'s Bracelets','Ochiudo\'s Kote', 'Custom M Gloves'},
+		Ring1 = 'Rajas Ring',
+		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
+		Back = 'Nomad\'s Mantle',
+		Waist = {'Life Belt', 'Brown Belt', 'Purple Belt'},
+		Legs = 'Republic Subligar',
+		Feet = {'Fed. Kyahan'}
+	
+	},
+	
+	Asuran_Priority = {
+		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Ear1 = 'Tor. Earring +1',
+		Ear2 = 'Tor. Earring +1',
+		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
+		Hands = {'Pallas\'s Bracelets','Ochiudo\'s Kote', 'Custom M Gloves'},
+		Ring1 = 'Rajas Ring',
+		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
+		Back = 'Nomad\'s Mantle',
+		Waist = {'Life Belt', 'Brown Belt', 'Purple Belt'},
+		Legs = 'Republic Subligar',
+		Feet = {'Fed. Kyahan'}
+	
+	},
+	
 	Chakra_Priority = {
 		Body = {'Temple Cyclas', 'Custom Tunic'},
 		Ring1 = 'Vigor Ring',
@@ -170,6 +202,70 @@ local sets = {
 		Hands = 'Devotee\'s Mitts',
 		Ring1 = 'Kshama Ring No.9',
 		Legs = 'Custom Slacks'
+	},
+	
+	Tanking_Priority = {
+	
+		Head = {''},
+		Neck = {'Peacock Amulet'},
+		Ear1 = {''},
+		Ear2 = {''},
+		Body = {''},
+		Hands = {''},
+		Ring1 = {''},
+		Ring2 = {''},
+		Back = {''},
+		Waist = {''},
+		Legs = {'Temple Hose'},
+		Feet = {''}
+	},
+	
+	PDT_Priority = {
+	
+		Head = {''},
+		Neck = {'Peacock Amulet'},
+		Ear1 = {''},
+		Ear2 = {''},
+		Body = {''},
+		Hands = {''},
+		Ring1 = {''},
+		Ring2 = {''},
+		Back = {''},
+		Waist = {''},
+		Legs = {'Temple Hose'},
+		Feet = {''}
+	},
+	
+	MDT_Priority = {
+	
+		Head = {''},
+		Neck = {'Peacock Amulet'},
+		Ear1 = {''},
+		Ear2 = {''},
+		Body = {''},
+		Hands = {''},
+		Ring1 = {''},
+		Ring2 = {''},
+		Back = {''},
+		Waist = {''},
+		Legs = {'Temple Hose'},
+		Feet = {''}
+	},
+	
+	Haste_Priority = {
+	
+		Head = {''},
+		Neck = {'Peacock Amulet'},
+		Ear1 = {''},
+		Ear2 = {''},
+		Body = {''},
+		Hands = {''},
+		Ring1 = {''},
+		Ring2 = {''},
+		Back = {''},
+		Waist = {''},
+		Legs = {'Temple Hose'},
+		Feet = {''}
 	}
 	
 };
