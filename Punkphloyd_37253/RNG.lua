@@ -319,6 +319,11 @@ local sets = {
 	
 	},
 	
+    RangedEnmityDown = {
+        Head = 'Scout\'s Beret',
+        Ear1 = 'Novia Earring',
+    },
+	
 	BarrageBase = {
 	
 		Head = 'Wyvern Helm',
@@ -352,6 +357,11 @@ local sets = {
 		Feet = 'Sct. Socks +1'
 	},
 	
+	
+    WSEnmityDown = {
+        Head = 'Scout\'s Beret',
+        Ear1 = 'Novia Earring',
+    },
 	
 	
 	EagleEyeShot = {
@@ -655,6 +665,9 @@ profile.HandleMidshot = function()
             gFunc.EquipSet(sets.RangedEnmityDown);
         end
         gFunc.EquipSet(ra_sets[accuracy_offset]);
+		if settings.prefer_enmity_down then
+			gFunc.Equip('Legs', 'Scout\'s Braccae');
+		end
     else
         gFunc.EquipSet(sets.BarrageBase);
 		if gData.GetPlayer().SubJob == "NIN" then
@@ -664,6 +677,9 @@ profile.HandleMidshot = function()
             gFunc.EquipSet(sets.RangedEnmityDown);
         end
         gFunc.EquipSet(ba_sets[accuracy_offset]);
+		if settings.prefer_enmity_down then
+			gFunc.Equip('Legs', 'Scout\'s Braccae');
+		end
     end
 
     local environment = gData.GetEnvironment();
@@ -716,6 +732,9 @@ profile.HandleWeaponskill = function()
     end
     gFunc.EquipSet(ws_sets[accuracy_offset]);
 	
+    if settings.prefer_enmity_down then
+        gFunc.Equip('Legs', 'Scout\'s Braccae');
+    end
 
     local environment = gData.GetEnvironment();
     if environment.Time >= 6.0 and environment.Time < 18.00 then
