@@ -45,8 +45,8 @@ local sets = {
 	TP_Priority = {
 		Head = {'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
-		Ear2 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
+		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
+		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
@@ -62,7 +62,7 @@ local sets = {
 		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Wyvern Earring',
-		Ear2 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
+		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = 'Scp. Harness +1',
 		Hands = 'Ochiudo\'s Kote',
 		Ring1 = 'Rajas Ring',
@@ -75,12 +75,12 @@ local sets = {
 	},
 	
 	Idle_Priority = {
-		Head = 'Emperor Hairpin',
+		Head = {'Arh. Jinpachi +1', 'Emperor Hairpin'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Dodge Earring',
 		Ear2 = 'Dodge Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'Custom M Gloves',
+		Hands = {'Dst. Mittens +1', 'Custom M Gloves'},
 		Ring1 = 'Vigor Ring',
 		Ring2 = 'Vigor Ring',
 		Back = 'Nomad\'s Mantle',
@@ -200,9 +200,9 @@ local sets = {
 		Legs = 'Custom Slacks'
 	},
 	
-	Tanking_Priority = {
+	Tank_Priority = {
 	
-		Head = {''},
+		Head = {'Arh. Jinpachi +1'},
 		Neck = {'Peacock Amulet'},
 		Ear1 = {''},
 		Ear2 = {''},
@@ -228,7 +228,7 @@ local sets = {
 		Ring2 = {''},
 		Back = {''},
 		Waist = {''},
-		Legs = {'Temple Hose'},
+		Legs = {''},
 		Feet = {''}
 	},
 	
@@ -244,7 +244,7 @@ local sets = {
 		Ring2 = {''},
 		Back = {''},
 		Waist = {''},
-		Legs = {'Temple Hose'},
+		Legs = {''},
 		Feet = {''}
 	},
 	
@@ -260,7 +260,7 @@ local sets = {
 		Ring2 = {''},
 		Back = {''},
 		Waist = {''},
-		Legs = {'Temple Hose'},
+		Legs = {'Byakko\'s Haidate'},
 		Feet = {''}
 	}
 	
@@ -325,7 +325,7 @@ profile.HandleDefault = function()
 			gFunc.Equip('Ear1', 'Wyvern Earring');
 		end
 		if cstance == 1 then
-			gFunc.Equip('Legs', 'Temple Hose');
+			gFunc.EquipSet(sets.Tank);
 		end 
 	elseif (player.Status == 'Resting') then
 		gFunc.EquipSet(sets.Resting);
