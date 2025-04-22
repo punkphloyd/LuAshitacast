@@ -383,6 +383,22 @@ local sets = {
 	
 	EnmityDown_Priority = {
 	
+	},
+	
+	HolyBolt = {
+	
+		Head = 'Scout\'s Beret',
+		Neck = 'Faith Torque',
+		Ear1 = 'Novio Earring',
+		Ear2 = 'Moldavite Earring',
+		Body = 'Kirin\'s Osode',
+		Hands = 'Blood Fng. Gnt.',
+		Ring1 = 'Behemoth Ring',
+		Ring2 = 'Behemoth Ring +1',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Scout\'s Belt',
+		Legs = 'Hunter\'s Braccae',
+		Feet = 'Suzaku\'s Sune-ate'
 	}
 	};
 
@@ -479,6 +495,15 @@ profile.HandleCommand = function(args)
         CalculateSets();
     end
 	
+	if args[1] == 'holy' then
+		if settings.using_holy then
+			settings.using_holy = false;
+			gFunc.Echo(3,"Using holy bolts disabled.");
+		else
+			settings.using_holy = true;
+			gFunc.Echo(3,"Using holy bolts enabled.");
+		end
+	end
 	-- Update sets based on required accuracy to cap on target
 	if args[1] == 'cap' then
         settings.accuracy_cap = tonumber(args[2]);
@@ -649,7 +674,6 @@ end
 
 profile.HandleMidshot = function()
 	
-	gFunc.EquipSet(sets.Ammo);
 
     local accuracy_offset = 0;
     if gData.GetBuffCount("Sharpshot") ~= 0 then
@@ -680,6 +704,12 @@ profile.HandleMidshot = function()
 		if settings.prefer_enmity_down then
 			gFunc.Equip('Legs', 'Scout\'s Braccae');
 		end
+		
+		if settings.using_holy then
+			gFunc.Equip('Ammo','Darksteel Bolt');
+		else
+			gFunc.EquipSet(sets.Ammo);
+		end
     end
 
     local environment = gData.GetEnvironment();
@@ -690,12 +720,21 @@ profile.HandleMidshot = function()
    
     end
 	
+	if settings.using_holy then
+		gFunc.Echo(7, "Holy set enabled");
+		gFunc.EquipSet(sets.HolyBolt);
+		gFunc.Equip('Ammo','Holy Bolt');
+	end
+	
 end
 
 profile.HandleWeaponskill = function()
 	
-    gFunc.EquipSet(sets.Ammo);
-
+	if settings.using_holy then
+		gFunc.Equip('Ammo','Darksteel Bolt');
+	else
+		gFunc.EquipSet(sets.Ammo);
+	end
     local accuracy_offset = 0;
 
     if gData.GetBuffCount("Sharpshot") ~= 0 then
