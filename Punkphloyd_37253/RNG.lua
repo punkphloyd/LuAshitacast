@@ -674,7 +674,6 @@ end
 
 profile.HandleMidshot = function()
 	
-	gFunc.EquipSet(sets.Ammo);
 
     local accuracy_offset = 0;
     if gData.GetBuffCount("Sharpshot") ~= 0 then
@@ -705,6 +704,12 @@ profile.HandleMidshot = function()
 		if settings.prefer_enmity_down then
 			gFunc.Equip('Legs', 'Scout\'s Braccae');
 		end
+		
+		if settings.using_holy then
+			gFunc.Equip('Ammo','Darksteel Bolt');
+		else
+			gFunc.EquipSet(sets.Ammo);
+		end
     end
 
     local environment = gData.GetEnvironment();
@@ -716,15 +721,20 @@ profile.HandleMidshot = function()
     end
 	
 	if settings.using_holy then
+		gFunc.Echo(7, "Holy set enabled");
 		gFunc.EquipSet(sets.HolyBolt);
+		gFunc.Equip('Ammo','Holy Bolt');
 	end
 	
 end
 
 profile.HandleWeaponskill = function()
 	
-    gFunc.EquipSet(sets.Ammo);
-
+	if settings.using_holy then
+		gFunc.Equip('Ammo','Darksteel Bolt');
+	else
+		gFunc.EquipSet(sets.Ammo);
+	end
     local accuracy_offset = 0;
 
     if gData.GetBuffCount("Sharpshot") ~= 0 then
