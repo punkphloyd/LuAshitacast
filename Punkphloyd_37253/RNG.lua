@@ -383,6 +383,22 @@ local sets = {
 	
 	EnmityDown_Priority = {
 	
+	},
+	
+	HolyBolt = {
+	
+		Head = 'Scout\'s Beret',
+		Neck = 'Faith Torque',
+		Ear1 = 'Novio Earring',
+		Ear2 = 'Moldavite Earring',
+		Body = 'Kirin\'s Osode',
+		Hands = 'Blood Fng. Gnt.',
+		Ring1 = 'Behemoth Ring',
+		Ring2 = 'Behemoth Ring +1',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Scout\'s Belt',
+		Legs = 'Hunter\'s Braccae',
+		Feet = 'Suzaku\'s Sune-ate'
 	}
 	};
 
@@ -479,6 +495,15 @@ profile.HandleCommand = function(args)
         CalculateSets();
     end
 	
+	if args[1] == 'holy' then
+		if settings.using_holy then
+			settings.using_holy = false;
+			gFunc.Echo(3,"Using holy bolts disabled.");
+		else
+			settings.using_holy = true;
+			gFunc.Echo(3,"Using holy bolts enabled.");
+		end
+	end
 	-- Update sets based on required accuracy to cap on target
 	if args[1] == 'cap' then
         settings.accuracy_cap = tonumber(args[2]);
@@ -689,6 +714,10 @@ profile.HandleMidshot = function()
 		gFunc.Equip('Ear2', 'Fenrir\'s Earring');
    
     end
+	
+	if settings.using_holy then
+		gFunc.EquipSet(sets.HolyBolt);
+	end
 	
 end
 
