@@ -7,9 +7,9 @@ local accuracies = gFunc.LoadFile('data/acc_reqs.dat');
 
 -- /checkparam <me> ranged accuracy minus r.acc from main, sub, range, ammo, and food when using base sets
 -- base sets should be geared for minimum accuracy and maximum damage
-local ra_base_accuracy = 395;           -- ranged attack base (sets.RangedBase)
-local ba_base_accuracy = 387;           -- barrage base (sets.BarrageBase)
-local ws_base_accuracy = 401;           -- weapon skill base (sets.WsBase), +10 if using sea gorget 
+local ra_base_accuracy = 397;           -- ranged attack base (sets.RangedBase)
+local ba_base_accuracy = 389;           -- barrage base (sets.BarrageBase)
+local ws_base_accuracy = 403;           -- weapon skill base (sets.WsBase), +10 if using sea gorget 
 
 
 local settings = {
