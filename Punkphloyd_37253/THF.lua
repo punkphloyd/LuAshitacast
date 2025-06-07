@@ -64,7 +64,7 @@ local sets = {
 	Idle_Priority = {
 	
 		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
+		Neck = 'Jeweled Torque',
 		Ear1 = 'Dodge Earring',
 		Ear2 = 'Dodge Earring',
 		Body = 'Scp. Harness +1',
@@ -96,7 +96,7 @@ local sets = {
 	Melee_Priority = {
 	
 		Head = 'Homam Zucchetto',
-		Neck = 'Peacock Amulet',
+		Neck = 'Love Torque',
 		Ear1 = 'Brutal Earring',
 		Ear2 = 'Triumph Earring',
 		Body = 'Scp. Harness +1',
@@ -127,7 +127,7 @@ local sets = {
 	SAWS_Priority = {
 	
 		Head = 'Emperor Hairpin',
-		Neck = 'Peacock Amulet',
+		Neck = 'Love Torque',
 		Ear1 = 'Triumph Earring',
 		Ear2 = 'Triumph Earring',
 		Body = 'Scp. Harness +1',
@@ -154,7 +154,7 @@ local sets = {
 	TAWS_Priority = {
 	
 		Head = 'Emperor Hairpin',
-		Neck = 'Peacock Amulet',
+		Neck = 'Love Torque',
 		Body = 'Scp. Harness +1',
 		Ear1 = 'Drone Earring',
 		Ear2 = 'Drone Earring',
@@ -182,7 +182,7 @@ local sets = {
 	SATAWS_Priority = {
 	
 		Head = 'Emperor Hairpin',
-		Neck = 'Peacock Amulet',
+		Neck = 'Love Torque',
 		Ear1 = 'Drone Earring',
 		Ear2 = 'Drone Earring',
 		Body = 'Scp. Harness +1',
