@@ -219,7 +219,7 @@ local sets = {
 		Ammo = 'Phtm. Tathlum', 
 		Head = 'Wzd. Petasos +1',
 		Neck = 'Checkered Scarf',
-		--Ear1 = '',
+		Ear1 = 'Warlock\'s Earring',
 		Ear2 = 'Loquac. Earring',
 		Body = 'Errant Hpl.',
 		Hands = 'Zenith Mitts',
@@ -400,6 +400,58 @@ local sets = {
 		Legs = 'Wizard\'s Tonban',
 		Feet = 'Rostrum Pumps'
 		
+	},
+	
+	Stun = {
+	
+		Head = 'Nashira Turban',
+		Neck = 'Dark Torque',
+		Ear1 = 'Loquac. Earring',
+		Ear2 = 'Novia Earring',
+		Body = 'Nashira Manteel',
+		Hands = 'Src. Gloves +1',
+		Ring1 = '',
+		Ring2 = '',
+		Back = 'Warlock\'s Mantle',
+		Waist = '',
+		Legs = 'Nashira Seraweels',
+		Feet = 'Src. Sabots +1'
+	
+	};
+	
+	Drain = {
+	
+		Head = 'Nashira Turban',
+		Neck = 'Dark Torque',
+		Ear1 = 'Loquac. Earring',
+		Ear2 = 'Novia Earring',
+		Body = 'Nashira Manteel',
+		Hands = 'Src. Gloves +1',
+		Ring1 = '',
+		Ring2 = '',
+		Back = 'Warlock\'s Mantle',
+		Waist = '',
+		Legs = 'Nashira Seraweels',
+		Feet = 'Src. Sabots +1'
+	
+	},
+	
+	
+	Aspir = {
+	
+		Head = 'Nashira Turban',
+		Neck = 'Dark Torque',
+		Ear1 = 'Loquac. Earring',
+		Ear2 = 'Novia Earring',
+		Body = 'Nashira Manteel',
+		Hands = 'Src. Gloves +1',
+		Ring1 = '',
+		Ring2 = '',
+		Back = 'Warlock\'s Mantle',
+		Waist = '',
+		Legs = 'Nashira Seraweels',
+		Feet = 'Src. Sabots +1'
+	
 	},
 	
 	Burst = {
