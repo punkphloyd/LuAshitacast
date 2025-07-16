@@ -26,7 +26,7 @@ local sets = {
 	Idle = {
         Main =  'Terra\'s Staff',
 		
-        Head = 'Gold Hairpin',
+        --Head = 'Gold Hairpin',
         Neck =  'Smn. Torque',
         Ear1 =  'Dodge Earring',
         Ear2 = 'Dodge Earring',
