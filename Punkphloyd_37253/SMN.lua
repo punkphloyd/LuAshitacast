@@ -30,7 +30,7 @@ local sets = {
         Neck =  'Smn. Torque',
         Ear1 =  'Dodge Earring',
         Ear2 = 'Dodge Earring',
-        Body =  'Seer\'s Tunic',
+        Body =  'Vermillion Cloak',
         Hands = 'Austere Cuffs',
         Ring1 = 'Ether Ring',
         Ring2 = 'Astral ring',
@@ -221,14 +221,14 @@ profile.HandleDefault = function()
 		gFunc.EquipSet(profile.Sets.perp);
 		gFunc.Equip('main', StaffTable[petElement]);
 		if(player.HPP <= 75) then
-                gFunc.Equip('Ring1', 'Conjurer\'s Ring');
+                --gFunc.Equip('Ring1', 'Conjurer\'s Ring');
         end
 		local env = gData.GetEnvironment();
 		if (env.DayElement == petElement) then
-			gFunc.Equip('body','Summoner\'s Dblt.');
+			--gFunc.Equip('body','Summoner\'s Dblt.');
 		end
 		if (env.WeatherElement == petElement) then
-			gFunc.Equip('head','Summoner\'s Horn');
+			--gFunc.Equip('head','Summoner\'s Horn');
 		end
 	end
 	if (player.IsMoving == true) then
