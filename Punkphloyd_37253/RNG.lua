@@ -304,7 +304,7 @@ local sets = {
 	
 	RangedBase_Priority = {
 	
-		Head = 'Wyvern Helm',
+		Head = 'Wyvern Helm +1',
 		Neck = 'Justice Torque',
 		Ear1 = 'Brutal Earring',
 		Ear2 = 'Triumph Earring',
@@ -326,7 +326,7 @@ local sets = {
 	
 	BarrageBase = {
 	
-		Head = 'Wyvern Helm',
+		Head = 'Wyvern Helm +1',
 		Neck = 'Justice Torque',
 		Ear1 = 'Brutal Earring',
 		Ear2 = 'Triumph Earring',
@@ -343,7 +343,7 @@ local sets = {
 	
 	WSBase = {
 	
-		Head = 'Wyvern Helm',
+		Head = 'Wyvern Helm +1',
 		Neck = 'Breeze Gorget',
 		Ear1 = 'Brutal Earring',
 		Ear2 = 'Triumph Earring',
@@ -366,7 +366,7 @@ local sets = {
 	
 	EagleEyeShot = {
 	
-		Head = 'Wyvern Helm',
+		Head = 'Wyvern Helm +1',
 		Neck = 'Justice Torque',
 		Ear1 = 'Triumph Earring',
 		Ear2 = 'Triumph Earring',
