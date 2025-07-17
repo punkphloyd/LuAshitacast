@@ -398,7 +398,7 @@ local sets = {
 		Back = 'Warlock\'s Mantle',
 		Waist = 'Hierarch Belt',
 		Legs = 'Wizard\'s Tonban',
-		Feet = 'Rostrum Pumps'
+		Feet = 'Igqira Huaraches'
 		
 	},
 	
@@ -410,12 +410,12 @@ local sets = {
 		Ear2 = 'Novia Earring',
 		Body = 'Nashira Manteel',
 		Hands = 'Src. Gloves +1',
-		Ring1 = '',
-		Ring2 = '',
+		Ring1 = 'Serket Ring',
+		Ring2 = 'Ether Ring',
 		Back = 'Warlock\'s Mantle',
 		Waist = '',
 		Legs = 'Nashira Seraweels',
-		Feet = 'Src. Sabots +1'
+		Feet = 'Rostrum Pumps'
 	
 	};
 	
@@ -427,12 +427,12 @@ local sets = {
 		Ear2 = 'Novia Earring',
 		Body = 'Nashira Manteel',
 		Hands = 'Src. Gloves +1',
-		Ring1 = '',
-		Ring2 = '',
+		Ring1 = 'Serket Ring',
+		Ring2 = 'Overlord\'s Ring',
 		Back = 'Warlock\'s Mantle',
 		Waist = '',
 		Legs = 'Nashira Seraweels',
-		Feet = 'Src. Sabots +1'
+		Feet = 'Igqira Huaraches'
 	
 	},
 	
@@ -445,12 +445,12 @@ local sets = {
 		Ear2 = 'Novia Earring',
 		Body = 'Nashira Manteel',
 		Hands = 'Src. Gloves +1',
-		Ring1 = '',
-		Ring2 = '',
+		Ring1 = 'Serket Ring',
+		Ring2 = 'Overlord\'s Ring',
 		Back = 'Warlock\'s Mantle',
 		Waist = '',
 		Legs = 'Nashira Seraweels',
-		Feet = 'Src. Sabots +1'
+		Feet = 'Igqira Huaraches'
 	
 	},
 	
