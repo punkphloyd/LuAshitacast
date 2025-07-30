@@ -91,118 +91,84 @@ local sets = {
 	},
 	
 	Idle_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = 'Beetle Mask +1',
-		Neck = 'Justice Badge',
-		Ear1 = 'Onyx Earring',
-		Ear2 = 'Onyx Earring',
-		Body = 'Field Tunica',
-		Hands = 'Chocobo Gloves',
-		Ring1 = 'Astral Ring',
-		Ring2 = 'Astral Ring',
+	
+		Head = 'Kampfschaller',
+		Neck = 'Holy Phial',
+		Ear1 = 'Pigeon Earring',
+		Ear2 = 'Pigeon Earring',
+		Body = 'Kampfbrust',
+		Hands = 'Kampfhentzes',
+		Ring1 = 'Stamina Ring',
+		Ring2 = 'Stamina Ring',
+		Back = 'Wolf Mantle +1',
+		Waist = 'Warrior\'s Belt +1',
+		Legs = 'Kampfdiechlings',
+		Feet = 'Kampfschuhs'
+	},
+	
+	
+	DD_Priority = {
+	
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Beetle Earring +1',
+		Ear2 = 'Beetle Earring +1',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = 'Ryl.Sqr. Mufflers',
+		Ring1 = 'Courage Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Nomad\'s Mantle',
+		Waist = 'Brave Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Kampfschuhs'
+	},
+	
+	
+	Tank_Priority = {
+	
+		Head = 'Kampfschaller',
+		Neck = 'Holy Phial',
+		Ear1 = 'Pigeon Earring',
+		Ear2 = 'Pigeon Earring',
+		Body = 'Kampfbrust',
+		Hands = 'Kampfhentzes',
+		Ring1 = 'Stamina Ring',
+		Ring2 = 'Stamina Ring',
+		Back = 'Wolf Mantle +1',
+		Waist = 'Warrior\'s Belt +1',
+		Legs = 'Kampfdiechlings',
+		Feet = 'Kampfschuhs'
+	},
+	
+	
+	SelfCure_Priority = {
+		Head = 'Cache-nez',
+		Neck = 'Holy Phial',
+		Ear1 = '',
+		Ear2 = '',
+		Body = '',
+		Hands = 'Devotee\'s Mitts',
+		Ring1 = '',
+		Ring2 = '',
 		Back = '',
 		Waist = 'Friar\'s Rope',
-		Legs = 'Field Hose',
-		Feet = 'Field Boots'
-	},
-	
-	
-	TP_Default_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = 'Bird Whistle',
-		Ear1 = '',
-		Ear2 = '',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Eisenbrust' , 'Chain Mail +1' },
-		Hands = '',
-		Ring1 = '',
-		Ring2 = '',
-		Back = '',
-		Waist = '',
-		Legs = '',
+		Legs = 'Custom Slacks',
 		Feet = ''
 	},
 	
 	
-	TP_Defence_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = 'Spike Necklace',
+	OtherCure_Priority = {
+		Head = 'Cache-nez',
+		Neck = 'Holy Phial',
 		Ear1 = '',
 		Ear2 = '',
 		Body = '',
-		Hands = '',
+		Hands = 'Devotee\'s Mitts',
 		Ring1 = '',
 		Ring2 = '',
 		Back = '',
-		Waist = '',
-		Legs = '',
-		Feet = ''
-	},
-	
-	TP_Acc_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = '',
-		Ear1 = '',
-		Ear2 = '',
-		Body = 'Beetle Harness',
-		Hands = '',
-		Ring1 = '',
-		Ring2 = '',
-		Back = '',
-		Waist = '',
-		Legs = '',
-		Feet = ''
-	},
-	
-	TP_MP_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = '',
-		Ear1 = '',
-		Ear2 = '',
-		Body = 'Choc. Jack Coat',
-		Hands = '',
-		Ring1 = '',
-		Ring2 = '',
-		Back = '',
-		Waist = '',
-		Legs = '',
-		Feet = ''
-	},
-	
-	Cure_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = '',
-		Ear1 = '',
-		Ear2 = '',
-		Body = '',
-		Hands = '',
-		Ring1 = '',
-		Ring2 = '',
-		Back = '',
-		Waist = '',
-		Legs = '',
+		Waist = 'Friar\'s Rope',
+		Legs = 'Custom Slacks',
 		Feet = ''
 	}
 	
@@ -223,7 +189,7 @@ profile.OnLoad = function()
 	AshitaCore:GetChatManager():QueueCommand(-1, '/bind F12 /pld Report');
 	varhelper.Initialize();
 	varhelper.CreateToggle('WeaponLock',true);
-	varhelper.CreateCycle('TPMode', { [1] = 'Default', [2] = 'Defence', [3] = 'Acc' , [4] = 'MP'});
+	varhelper.CreateCycle('TPMode', { [1] = 'Tank', [2] = 'DD'});
 	
 end
 
@@ -261,7 +227,11 @@ profile.HandleDefault = function()
 	local player = gData.GetPlayer();
 
 	if (player.Status == 'Engaged') then
-		gFunc.EquipSet('TP_' .. tostring(varhelper.GetCycle('TPMode')));
+		if gData.GetBuffCount("Copy Image (3)") == 1 or gData.GetBuffCount("Copy Image (2)") == 1 or gData.GetBuffCount("Copy Image (1)") == 1 then
+			gFunc.EquipSet(sets.DD);
+		else
+			gFunc.EquipSet(tostring(varhelper.GetCycle('TPMode')));
+		end
 	elseif (player.Status == 'Resting') then
 		gFunc.EquipSet(sets.Resting);
 	else
