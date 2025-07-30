@@ -7,6 +7,38 @@ local Settings = {
 	CurrentLevel = 0;
 }
 
+local mp_thresholds = {
+
+	['Tank'] = 183,
+	['DD'] = 0
+
+};
+
+local mp_set_options = {
+	
+	['Tank'] = {
+	
+		Neck = 'Holy Phial',
+		Ring1 = 'Astral Ring',
+		Ring2 = 'Astral Ring',
+		Waist = 'Friar\'s Rope',
+		Legs = 'Custom Slacks',
+		Feet = 'Custom M Boots'
+	
+	},
+	
+	['DD'] = {
+	
+		Neck = 'Holy Phial',
+		Ring1 = 'Astral Ring',
+		Ring2 = 'Astral Ring',
+		Waist = 'Friar\'s Rope',
+		Legs = 'Custom Slacks',
+		Feet = 'Custom M Boots'
+	
+	},
+
+}
 
 local sets = {
 	
@@ -52,42 +84,34 @@ local sets = {
 	
 	
 	Enmity_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = '',
+		Head = 'Cache-nez',
+		Neck = 'Holy Phial',
 		Ear1 = '',
 		Ear2 = '',
 		Body = '',
-		Hands = '',
-		Ring1 = '',
-		Ring2 = '',
-		Back = '',
-		Waist = '',
-		Legs = '',
-		Feet = ''
+		Hands = 'Devotee\'s Mitts',
+		Ring1 = 'Astral Ring',
+		Ring2 = 'Astral Ring',
+		Back = 'Breath Mantle',
+		Waist = 'Friar\'s Rope',
+		Legs = 'Custom Slacks',
+		Feet = 'Custom M Boots'
 	},
 	
 	
 	Resting_Priority = {
-		Main = '',
-		Sub = '',
-		Range = '',
-		Ammo = '',
-		Head = '',
-		Neck = '',
-		Ear1 = '',
-		Ear2 = '',
-		Body = '',
-		Hands = '',
-		Ring1 = '',
-		Ring2 = '',
-		Back = '',
-		Waist = '',
-		Legs = '',
-		Feet = ''
+		Head = 'Cache-nez',
+		Neck = 'Holy Phial',
+		Ear1 = 'Pigeon Earring',
+		Ear2 = 'Pigeon Earring',
+		Body = 'Custom Tunic',
+		Hands = 'Devotee\'s Mitts',
+		Ring1 = 'Astral Ring',
+		Ring2 = 'Astral Ring',
+		Back = 'Breath Mantle',
+		Waist = 'Friar\'s Rope',
+		Legs = 'Custom Slacks',
+		Feet = 'Custom M Boots'
 	},
 	
 	Idle_Priority = {
@@ -100,10 +124,26 @@ local sets = {
 		Hands = 'Kampfhentzes',
 		Ring1 = 'Stamina Ring',
 		Ring2 = 'Stamina Ring',
-		Back = 'Wolf Mantle +1',
+		Back = 'Breath Mantle',
 		Waist = 'Warrior\'s Belt +1',
 		Legs = 'Kampfdiechlings',
 		Feet = 'Kampfschuhs'
+	},
+	
+	MPEff_Priority = {
+	
+		Head = 'Kampfschaller',
+		Neck = 'Holy Phial',
+		Ear1 = 'Pigeon Earring',
+		Ear2 = 'Pigeon Earring',
+		Body = 'Kampfbrust',
+		Hands = 'Kampfhentzes',
+		Ring1 = 'Astral Ring',
+		Ring2 = 'Astral Ring',
+		Back = 'Breath Mantle',
+		Waist = 'Friar\'s Rope',
+		Legs = 'Custom Slacks',
+		Feet = 'Custom M Boots'
 	},
 	
 	
@@ -117,7 +157,7 @@ local sets = {
 		Hands = 'Ryl.Sqr. Mufflers',
 		Ring1 = 'Courage Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Nomad\'s Mantle',
+		Back = 'Breath Mantle',
 		Waist = 'Brave Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Kampfschuhs'
@@ -134,7 +174,7 @@ local sets = {
 		Hands = 'Kampfhentzes',
 		Ring1 = 'Stamina Ring',
 		Ring2 = 'Stamina Ring',
-		Back = 'Wolf Mantle +1',
+		Back = 'Breath Mantle',
 		Waist = 'Warrior\'s Belt +1',
 		Legs = 'Kampfdiechlings',
 		Feet = 'Kampfschuhs'
@@ -150,7 +190,7 @@ local sets = {
 		Hands = 'Devotee\'s Mitts',
 		Ring1 = '',
 		Ring2 = '',
-		Back = '',
+		Back = 'Breath Mantle',
 		Waist = 'Friar\'s Rope',
 		Legs = 'Custom Slacks',
 		Feet = ''
@@ -166,7 +206,7 @@ local sets = {
 		Hands = 'Devotee\'s Mitts',
 		Ring1 = '',
 		Ring2 = '',
-		Back = '',
+		Back = 'Breath Mantle',
 		Waist = 'Friar\'s Rope',
 		Legs = 'Custom Slacks',
 		Feet = ''
@@ -181,6 +221,7 @@ profile.Sets = sets;
 profile.OnLoad = function()
 	gSettings.AllowAddSet = true;
 	AshitaCore:GetChatManager():QueueCommand(-1,'/alias /pld /lac fwd');
+	AshitaCore:GetChatManager():QueueCommand(-1,'/alias /eff /lac fwd eff');
 	AshitaCore:GetChatManager():QueueCommand(-1,'/lac disable Main');
 	AshitaCore:GetChatManager():QueueCommand(-1,'/lac disable Sub');
 	
@@ -190,6 +231,7 @@ profile.OnLoad = function()
 	varhelper.Initialize();
 	varhelper.CreateToggle('WeaponLock',true);
 	varhelper.CreateCycle('TPMode', { [1] = 'Tank', [2] = 'DD'});
+	varhelper.CreateToggle('Efficiency', false);
 	
 end
 
@@ -210,7 +252,9 @@ profile.HandleCommand = function(args)
 		varhelper.AdvanceCycle('TPMode');
 		gFunc.Message('TP Mode: ' .. tostring(varhelper.GetCycle('TPMode')));
 	
-	
+	elseif(args[1] == 'eff') then
+		varhelper.AdvanceToggle('Efficiency');
+		gFunc.Message('Efficiency Mode: ' .. tostring(varhelper.GetToggle('Efficiency')));
 	elseif(args[1] == 'Report') then
 		gFunc.Message('TP Mode (toggle w/ CTRL+F9): ' .. tostring(varhelper.GetCycle('TPMode')));
 	end
@@ -226,16 +270,26 @@ profile.HandleDefault = function()
 	end
 	local player = gData.GetPlayer();
 
+	local threshold_mp = mp_thresholds[tostring(varhelper.GetCycle('TPMode'))];
+	
 	if (player.Status == 'Engaged') then
-		if gData.GetBuffCount("Copy Image (3)") == 1 or gData.GetBuffCount("Copy Image (2)") == 1 or gData.GetBuffCount("Copy Image (1)") == 1 then
-			gFunc.EquipSet(sets.DD);
+		if player.mp > threshold_mp then
+			gFunc.EquipSet(sets.MPEff);
 		else
-			gFunc.EquipSet(tostring(varhelper.GetCycle('TPMode')));
+			if gData.GetBuffCount("Copy Image (3)") == 1 or gData.GetBuffCount("Copy Image (2)") == 1 or gData.GetBuffCount("Copy Image (1)") == 1 then
+				gFunc.EquipSet(sets.DD);
+			else
+				gFunc.EquipSet(tostring(varhelper.GetCycle('TPMode')));
+			end
 		end
 	elseif (player.Status == 'Resting') then
 		gFunc.EquipSet(sets.Resting);
 	else
-		gFunc.EquipSet(sets.Idle);
+		if player.mp > threshold_mp then
+			gFunc.EquipSet(sets.MPEff);
+		else
+			gFunc.EquipSet(sets.Idle);
+		end
 	end
 
 end
@@ -244,10 +298,21 @@ end
 profile.HandleAbility = function()
 
 	local action = gData.GetAction();
-	if(action.Name() == 'Provoke') then
+	local name = action.Name();
+	if(name == 'Provoke') then
+		gFunc.EquipSet(sets.Enmity);
+	elseif(name == 'Shield Bash') then
+		gFunc.EquipSet(sets.Enmity);
+	elseif(name == 'Sentinel') then
+		gFunc.EquipSet(sets.Enmity);
+	elseif(name == 'Holy Circle') then
+		gFunc.EquipSet(sets.Enmity);
+	elseif(name == 'Defender') then
+		gFunc.EquipSet(sets.Enmity);
+	elseif(name == 'Berserk') then
 		gFunc.EquipSet(sets.Enmity);
 	end
-
+	
 end
 
 
