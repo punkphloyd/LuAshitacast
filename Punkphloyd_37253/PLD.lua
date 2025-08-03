@@ -10,7 +10,7 @@ local Settings = {
 local mp_thresholds = {
 
 	['Tank'] = 183,
-	['DD'] = 0
+	['DD'] = 183
 
 };
 
@@ -117,13 +117,13 @@ local sets = {
 	Idle_Priority = {
 	
 		Head = 'Kampfschaller',
-		Neck = 'Holy Phial',
+		Neck = {'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
 		Body = 'Kampfbrust',
 		Hands = 'Kampfhentzes',
-		Ring1 = 'Stamina Ring',
-		Ring2 = 'Stamina Ring',
+		Ring1 = {'Verve Ring', 'Stamina Ring'},
+		Ring2 = {'Verve Ring', 'Stamina Ring'},
 		Back = 'Breath Mantle',
 		Waist = 'Warrior\'s Belt +1',
 		Legs = 'Kampfdiechlings',
@@ -167,17 +167,34 @@ local sets = {
 	Tank_Priority = {
 	
 		Head = 'Kampfschaller',
-		Neck = 'Holy Phial',
+		Neck = {'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
 		Body = 'Kampfbrust',
 		Hands = 'Kampfhentzes',
-		Ring1 = 'Stamina Ring',
-		Ring2 = 'Stamina Ring',
+		Ring1 = {'Verve Ring', 'Stamina Ring'},
+		Ring2 = {'Verve Ring', 'Stamina Ring'},
 		Back = 'Breath Mantle',
 		Waist = 'Warrior\'s Belt +1',
 		Legs = 'Kampfdiechlings',
 		Feet = 'Kampfschuhs'
+	},
+	
+	Hybrid_Priority = {
+	
+		Head = 'Kampfschaller',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Pigeon Earring',
+		Ear2 = 'Pigeon Earring',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = 'Ryl.Sqr. Mufflers',
+		Ring1 = {'Verve Ring', 'Stamina Ring'},
+		Ring2 = {'Verve Ring', 'Stamina Ring'},
+		Back = 'Breath Mantle',
+		Waist = 'Warrior\'s Belt +1',
+		Legs = 'Kampfdiechlings',
+		Feet = 'Kampfschuhs'
+	
 	},
 	
 	
@@ -210,6 +227,40 @@ local sets = {
 		Waist = 'Friar\'s Rope',
 		Legs = 'Custom Slacks',
 		Feet = ''
+	},
+	
+	SwordWS_Priority = {
+	
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Beetle Earring +1',
+		Ear2 = 'Beetle Earring +1',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = 'Ryl.Sqr. Mufflers',
+		Ring1 = 'Courage Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Breath Mantle',
+		Waist = 'Brave Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Kampfschuhs'
+	
+	},
+	
+	ClubWS_Priority = {
+	
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Beetle Earring +1',
+		Ear2 = 'Beetle Earring +1',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = 'Ryl.Sqr. Mufflers',
+		Ring1 = 'Courage Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Breath Mantle',
+		Waist = 'Brave Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Kampfschuhs'
+	
 	}
 	
 	
@@ -233,6 +284,9 @@ profile.OnLoad = function()
 	varhelper.CreateCycle('TPMode', { [1] = 'Tank', [2] = 'DD'});
 	varhelper.CreateToggle('Efficiency', false);
 	
+	AshitaCore:GetChatManager():QueueCommand(1, "/lockstyleset 6");
+	AshitaCore:GetChatManager():QueueCommand(1, '/macro book 6');
+	AshitaCore:GetChatManager():QueueCommand(1, '/macro set 1');
 end
 
 profile.OnUnload = function()
@@ -269,36 +323,40 @@ profile.HandleDefault = function()
 		Settings.CurrentLevel = mylevel;
 	end
 	local player = gData.GetPlayer();
-
-	local threshold_mp = mp_thresholds[tostring(varhelper.GetCycle('TPMode'))];
+	local mode = varhelper.GetCycle('TPMode');
+	local threshold_mp = mp_thresholds[mode];
 	
 	if (player.Status == 'Engaged') then
-		if player.mp > threshold_mp then
-			gFunc.EquipSet(sets.MPEff);
+		
+		if gData.GetBuffCount("Copy Image (3)") == 1 or gData.GetBuffCount("Copy Image (2)") == 1 or gData.GetBuffCount("Copy Image (1)") == 1 then
+			gFunc.EquipSet(sets.DD);
 		else
-			if gData.GetBuffCount("Copy Image (3)") == 1 or gData.GetBuffCount("Copy Image (2)") == 1 or gData.GetBuffCount("Copy Image (1)") == 1 then
-				gFunc.EquipSet(sets.DD);
-			else
-				gFunc.EquipSet(tostring(varhelper.GetCycle('TPMode')));
-			end
+			gFunc.EquipSet(tostring(varhelper.GetCycle('TPMode')));
 		end
+		
 	elseif (player.Status == 'Resting') then
 		gFunc.EquipSet(sets.Resting);
 	else
-		if player.mp > threshold_mp then
-			gFunc.EquipSet(sets.MPEff);
-		else
-			gFunc.EquipSet(sets.Idle);
+		
+		gFunc.EquipSet(sets.Idle);
+		
+	end
+	if varhelper.GetToggle('Efficiency') == true then
+		if player.MP > mp_thresholds[mode] then 
+				gFunc.EquipSet(mp_set_options[mode]);
 		end
 	end
-
 end
 
 
 profile.HandleAbility = function()
 
+	local player = gData.GetPlayer();
+	local mode = varhelper.GetCycle('TPMode');
+	local threshold_mp = mp_thresholds[mode];
+	
 	local action = gData.GetAction();
-	local name = action.Name();
+	local name = action.Name;
 	if(name == 'Provoke') then
 		gFunc.EquipSet(sets.Enmity);
 	elseif(name == 'Shield Bash') then
@@ -311,6 +369,12 @@ profile.HandleAbility = function()
 		gFunc.EquipSet(sets.Enmity);
 	elseif(name == 'Berserk') then
 		gFunc.EquipSet(sets.Enmity);
+	end
+	
+	if varhelper.GetToggle('Efficiency') == true then
+		if player.MP > mp_thresholds[mode] then 
+				gFunc.EquipSet(mp_set_options[mode]);
+		end
 	end
 	
 end
@@ -331,9 +395,22 @@ end
 profile.HandleMidcast = function()
     local player = gData.GetPlayer();
     local spell = gData.GetAction();
+	local target = gData.GetActionTarget();
 
 	if string.contains(spell.Name, 'Cure') then
-		gFunc.EquipSet(sets.Cure);
+		if (target.Name == 'Punkphloyd') then
+			gFunc.EquipSet(sets.SelfCure);
+		else
+			gFunc.EquipSet(sets.OtherCure);
+		end
+	elseif string.contains(spell.Name, 'Flash') then
+		gFunc.EquipSet(sets.Enmity);
+	end
+	
+	if varhelper.GetToggle('Efficiency') == true then
+		if player.MP > mp_thresholds[mode] then 
+				gFunc.EquipSet(mp_set_options[mode]);
+		end
 	end
 	
 end
@@ -353,6 +430,21 @@ end
 
 profile.HandleWeaponskill = function()
 
+    local player = gData.GetPlayer();
+    local ws = gData.GetAction().Name;
+	
+	if (ws == 'Starlight') then
+		gFunc.EquipSet(sets.MPEff);
+	else
+		gFunc.EquipSet(SwordWS);
+		
+	end
+	if varhelper.GetToggle('Efficiency') == true then
+		if player.MP > mp_thresholds[mode] then 
+				gFunc.EquipSet(mp_set_options[mode]);
+		end
+	end
+	
 
 end
 
