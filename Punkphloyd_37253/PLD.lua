@@ -116,28 +116,28 @@ local sets = {
 	
 	Idle_Priority = {
 	
-		Head = 'Irn.Msk. Armet',
+		Head =  {'Luisant Salade', 'Kampfschaller'},
 		Neck = {'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = 'Kampfbrust',
-		Hands = 'Kampfhentzes',
+		Body = {'Luisant Haubert', 'Kampfbrust'},
+		Hands = {'Luisant Moufles', 'Kampfhentzes'},
 		Ring1 = {'Verve Ring', 'Stamina Ring'},
 		Ring2 = {'Verve Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
 		Waist = 'Warrior\'s Belt +1',
-		Legs = 'Kampfdiechlings',
-		Feet = 'Kampfschuhs'
+		Legs = {'Luisant Brayettes', 'Kampfdiechlings'},
+		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
 	},
 	
 	MPEff_Priority = {
 	
-		Head = 'Kampfschaller',
+		Head =  {'Luisant Salade', 'Kampfschaller'},
 		Neck = 'Holy Phial',
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = 'Kampfbrust',
-		Hands = 'Kampfhentzes',
+		Body = {'Luisant Haubert', 'Kampfbrust'},
+		Hands = {'Luisant Moufles', 'Kampfhentzes'},
 		Ring1 = 'Astral Ring',
 		Ring2 = 'Astral Ring',
 		Back = 'High Brth. Mantle',
@@ -149,51 +149,51 @@ local sets = {
 	
 	DD_Priority = {
 	
-		Head = 'Emperor Hairpin',
+		Head = {'Luisant Salade', 'Emperor Hairpin'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Beetle Earring +1',
 		Ear2 = 'Beetle Earring +1',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
-		Hands = 'Ryl.Sqr. Mufflers',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = {'Luisant Moufles', 'Ryl.Sqr. Mufflers'},
 		Ring1 = {'Sniper\'s Ring +1', 'Courage Ring'},
 		Ring2 = 'Rajas Ring',
 		Back = 'High Brth. Mantle',
 		Waist = 'Brave Belt',
 		Legs = 'Republic Subligar',
-		Feet = 'Kampfschuhs'
+		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
 	},
 	
 	
 	Tank_Priority = {
 	
-		Head = 'Kampfschaller',
+		Head =  {'Luisant Salade', 'Kampfschaller'},
 		Neck = {'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = 'Kampfbrust',
-		Hands = 'Kampfhentzes',
+		Body = {'Luisant Haubert', 'Kampfbrust'},
+		Hands = {'Luisant Moufles', 'Kampfhentzes'},
 		Ring1 = {'Verve Ring', 'Stamina Ring'},
 		Ring2 = {'Verve Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
 		Waist = 'Warrior\'s Belt +1',
-		Legs = 'Kampfdiechlings',
-		Feet = 'Kampfschuhs'
+		Legs = {'Luisant Brayettes', 'Kampfdiechlings'},
+		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
 	},
 	
 	Hybrid_Priority = {
 	
-		Head = 'Kampfschaller',
+		Head =  {'Luisant Salade', 'Kampfschaller'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
-		Hands = 'Ryl.Sqr. Mufflers',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = {'Luisant Moufles', 'Kampfhentzes'},
 		Ring1 = {'Verve Ring', 'Stamina Ring'},
 		Ring2 = {'Verve Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
 		Waist = 'Warrior\'s Belt +1',
-		Legs = 'Kampfdiechlings',
-		Feet = 'Kampfschuhs'
+		Legs = {'Luisant Brayettes', 'Kampfdiechlings'},
+		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
 	
 	},
 	
