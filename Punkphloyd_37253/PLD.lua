@@ -231,35 +231,35 @@ local sets = {
 	
 	SwordWS_Priority = {
 	
-		Head = 'Emperor Hairpin',
+		Head = {'Luisant Salade', 'Emperor Hairpin'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Beetle Earring +1',
 		Ear2 = 'Beetle Earring +1',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
-		Hands = 'Ryl.Sqr. Mufflers',
-		Ring1 = 'Courage Ring',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = {'Luisant Moufles', 'Ryl.Sqr. Mufflers'},
+		Ring1 = {'Sniper\'s Ring +1', 'Courage Ring'},
 		Ring2 = 'Rajas Ring',
 		Back = 'High Brth. Mantle',
 		Waist = 'Brave Belt',
 		Legs = 'Republic Subligar',
-		Feet = 'Kampfschuhs'
+		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
 	
 	},
 	
 	ClubWS_Priority = {
 	
-		Head = 'Emperor Hairpin',
+		Head = {'Luisant Salade', 'Emperor Hairpin'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Beetle Earring +1',
 		Ear2 = 'Beetle Earring +1',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Kampfbrust' , 'Chain Mail +1' },
-		Hands = 'Ryl.Sqr. Mufflers',
-		Ring1 = 'Courage Ring',
+		Body = {'Haubergeon', 'Scorpion Harness', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
+		Hands = {'Luisant Moufles', 'Ryl.Sqr. Mufflers'},
+		Ring1 = {'Sniper\'s Ring +1', 'Courage Ring'},
 		Ring2 = 'Rajas Ring',
 		Back = 'High Brth. Mantle',
 		Waist = 'Brave Belt',
 		Legs = 'Republic Subligar',
-		Feet = 'Kampfschuhs'
+		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
 	
 	}
 	
