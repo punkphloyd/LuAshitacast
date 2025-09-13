@@ -166,34 +166,34 @@ local sets = {
 	
 	Tank_Priority = {
 	
-		Head =  {'Luisant Salade', 'Kampfschaller'},
+		Head =  {'Luisant Salade', 'Irn.Msk. Armet', 'Kampfschaller'},
 		Neck = {'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = {'Luisant Haubert', 'Kampfbrust'},
-		Hands = {'Luisant Moufles', 'Kampfhentzes'},
+		Body = {'Luisant Haubert', 'Ryl.Sqr. Chnml. +2', 'Kampfbrust'},
+		Hands = {'Luisant Moufles', 'Irn.Msk. Gauntlets', 'Kampfhentzes'},
 		Ring1 = {'Verve Ring', 'Stamina Ring'},
 		Ring2 = {'Verve Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
 		Waist = 'Warrior\'s Belt +1',
-		Legs = {'Luisant Brayettes', 'Kampfdiechlings'},
-		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
+		Legs = {'Luisant Brayettes', 'Ryl.Sqr. Brch. +1', 'Kampfdiechlings'},
+		Feet = {'Luisant Sollerets', 'Irn.Msk. Sabatons', 'Kampfschuhs'}
 	},
 	
 	Hybrid_Priority = {
 	
-		Head =  {'Luisant Salade', 'Kampfschaller'},
+		Head =  {'Luisant Salade', 'Irn.Msk. Armet', 'Kampfschaller'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
-		Hands = {'Luisant Moufles', 'Kampfhentzes'},
-		Ring1 = {'Verve Ring', 'Stamina Ring'},
-		Ring2 = {'Verve Ring', 'Stamina Ring'},
+		Body = {'Luisant Haubert', 'Ryl.Sqr. Chnml. +2', 'Kampfbrust'},
+		Hands = {'Luisant Moufles', 'Irn.Msk. Gauntlets', 'Kampfhentzes'},
+		Ring1 = {'Sniper\'s Ring +1', 'Stamina Ring'},
+		Ring2 = {'Rajas Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
-		Waist = 'Warrior\'s Belt +1',
-		Legs = {'Luisant Brayettes', 'Kampfdiechlings'},
-		Feet = {'Luisant Sollerets', 'Kampfschuhs'}
+		Waist = {'Life Belt', 'Warrior\'s Belt +1'},
+		Legs = {'Luisant Brayettes', 'Ryl.Sqr. Brch. +1', 'Kampfdiechlings'},
+		Feet = {'Luisant Sollerets', 'Irn.Msk. Sabatons', 'Kampfschuhs'}
 	
 	},
 	
