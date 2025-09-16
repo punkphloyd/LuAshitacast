@@ -117,7 +117,7 @@ local sets = {
 	Idle_Priority = {
 	
 		Head =  {'Luisant Salade', 'Kampfschaller'},
-		Neck = {'Medieval Collar', 'Holy Phial'},
+		Neck = {'Parade Gorget', 'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
 		Body = {'Luisant Haubert', 'Kampfbrust'},
