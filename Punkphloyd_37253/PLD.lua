@@ -101,7 +101,7 @@ local sets = {
 	
 	Resting_Priority = {
 		Head = 'Cache-nez',
-		Neck = 'Holy Phial',
+		Neck = 'Parade Gorget',
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
 		Body = 'Custom Tunic',
