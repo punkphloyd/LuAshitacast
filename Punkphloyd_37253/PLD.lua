@@ -89,7 +89,7 @@ local sets = {
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
 		Body = 'Custom Tunic',
-		Hands = 'Devotee\'s Mitts',
+		Hands = 'Gallant Gauntlets',
 		Ring1 = 'Serket Ring',
 		Ring2 = 'Ether Ring',
 		Back = 'High Brth. Mantle',
@@ -116,17 +116,17 @@ local sets = {
 	
 	Idle_Priority = {
 	
-		Head =  {'Luisant Salade', 'Kampfschaller'},
+		Head =  {'Ryl.Kgt. Bascinet', 'Luisant Salade', 'Irn.Msk. Armet', 'Kampfschaller'},
 		Neck = {'Parade Gorget', 'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = {'Luisant Haubert', 'Kampfbrust'},
-		Hands = {'Luisant Moufles', 'Kampfhentzes'},
+		Body = {'Ryl.Kgt. Chainmail', 'Luisant Haubert', 'Ryl.Sqr. Chnml. +2', 'Kampfbrust'},
+		Hands = {'Gallant Gauntlets', 'Luisant Moufles', 'Irn.Msk. Gauntlets', 'Kampfhentzes'},
 		Ring1 = {'Serket Ring', 'Verve Ring', 'Stamina Ring'},
-		Ring2 = {'Verve Ring', 'Stamina Ring'},
+		Ring2 = {'Vigor Ring', 'Verve Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
 		Waist = 'Warrior\'s Belt +1',
-		Legs = {'Luisant Brayettes', 'Kampfdiechlings'},
+		Legs = {'Ryl.Kgt. Breeches', 'Luisant Brayettes', 'Ryl.Sqr. Brch. +1', 'Kampfdiechlings'},
 		Feet = {'Gallant Leggings', 'Luisant Sollerets', 'Kampfschuhs'}
 	},
 	
@@ -166,18 +166,18 @@ local sets = {
 	
 	Tank_Priority = {
 	
-		Head =  {'Luisant Salade', 'Irn.Msk. Armet', 'Kampfschaller'},
+		Head =  {'Ryl.Kgt. Bascinet', 'Luisant Salade', 'Irn.Msk. Armet', 'Kampfschaller'},
 		Neck = {'Medieval Collar', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = {'Luisant Haubert', 'Ryl.Sqr. Chnml. +2', 'Kampfbrust'},
-		Hands = {'Luisant Moufles', 'Irn.Msk. Gauntlets', 'Kampfhentzes'},
-		Ring1 = {'Verve Ring', 'Stamina Ring'},
-		Ring2 = {'Verve Ring', 'Stamina Ring'},
+		Body = {'Ryl.Kgt. Chainmail', 'Luisant Haubert', 'Ryl.Sqr. Chnml. +2', 'Kampfbrust'},
+		Hands = {'Gallant Gauntlets', 'Luisant Moufles', 'Irn.Msk. Gauntlets', 'Kampfhentzes'},
+		Ring1 = {'Vigor Ring', 'Verve Ring', 'Stamina Ring'},
+		Ring2 = {'Vigor Ring', 'Verve Ring', 'Stamina Ring'},
 		Back = 'High Brth. Mantle',
 		Waist = 'Warrior\'s Belt +1',
-		Legs = {'Luisant Brayettes', 'Ryl.Sqr. Brch. +1', 'Kampfdiechlings'},
-		Feet = {'Luisant Sollerets', 'Irn.Msk. Sabatons', 'Kampfschuhs'}
+		Legs = {'Ryl.Kgt. Breeches', 'Luisant Brayettes', 'Ryl.Sqr. Brch. +1', 'Kampfdiechlings'},
+		Feet = {'Gallant Leggings', 'Luisant Sollerets', 'Irn.Msk. Sabatons', 'Kampfschuhs'}
 	},
 	
 	Hybrid_Priority = {
@@ -201,31 +201,31 @@ local sets = {
 	SelfCure_Priority = {
 		Head = 'Cache-nez',
 		Neck = 'Holy Phial',
-		Ear1 = '',
+		Ear1 = 'Hospitaler Earring',
 		Ear2 = '',
 		Body = 'Custom Tunic',
-		Hands = 'Devotee\'s Mitts',
+		Hands = 'Gallant Gauntlets',
 		Ring1 = 'Serket Ring',
 		Ring2 = 'Ether Ring',
 		Back = 'High Brth. Mantle',
-		Waist = 'Friar\'s Rope',
+		Waist = 'Swift Belt',
 		Legs = 'Custom Slacks',
-		Feet = ''
+		Feet = 'Gallant Leggings'
 	},
 	
 	
 	OtherCure_Priority = {
 		Head = 'Cache-nez',
 		Neck = 'Holy Phial',
-		Ear1 = '',
+		Ear1 = 'Hospitaler Earring',
 		Ear2 = '',
 		Body = '',
-		Hands = 'Devotee\'s Mitts',
+		Hands = 'Gallant Gauntlets',
 		Ring1 = '',
 		Ring2 = '',
 		Back = 'High Brth. Mantle',
 		Waist = 'Friar\'s Rope',
-		Legs = 'Custom Slacks',
+		Waist = 'Swift Belt',
 		Feet = ''
 	},
 	
