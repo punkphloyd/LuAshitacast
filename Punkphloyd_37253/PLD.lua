@@ -153,7 +153,7 @@ local sets = {
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Tor. Earring +1',
 		Ear2 = 'Tor. Earring +1',
-		Body = {'Haubergeon', 'Scorpion Harness', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
+		Body = {'Haubergeon', 'Scp. Harness +1', 'Luisant Haubert', 'Kampfbrust' , 'Chain Mail +1' },
 		Hands = {'Luisant Moufles', 'Ryl.Sqr. Mufflers'},
 		Ring1 = {'Sniper\'s Ring +1', 'Courage Ring'},
 		Ring2 = 'Rajas Ring',
@@ -167,7 +167,7 @@ local sets = {
 	Tank_Priority = {
 	
 		Head =  {'Ryl.Kgt. Bascinet', 'Luisant Salade', 'Irn.Msk. Armet', 'Kampfschaller'},
-		Neck = {'Medieval Collar', 'Holy Phial'},
+		Neck = {'Peacock Amulet', 'Holy Phial'},
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
 		Body = {'Ryl.Kgt. Chainmail', 'Luisant Haubert', 'Ryl.Sqr. Chnml. +2', 'Kampfbrust'},
