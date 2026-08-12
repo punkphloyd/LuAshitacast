@@ -216,7 +216,7 @@ local sets = {
 		Back = {''},
 		Waist = {'Black Belt'},
 		Legs = {'Temple Hose'},
-		Feet = {''}
+		Feet = {'Melee Gaiters'}
 	},
 	
 	PDT_Priority = {
