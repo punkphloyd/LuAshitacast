@@ -190,7 +190,7 @@ local sets = {
 		Ring1 = 'Vigor Ring',
 		Ring2 = 'Vigor Ring',
 		Back = 'Melee Cape',
-		Waist = 'Warrior\'s Belt +1',
+		Waist = {'Warwolf Belt',  'Warrior\'s Belt +1'},
 		Legs = 'Republic Subligar',
 	},
 	
@@ -326,15 +326,17 @@ profile.HandleDefault = function()
 	if (player.Status == 'Engaged') then
 		gFunc.EquipSet(sets.TP);
 		
-		if environment.Time >= 6.0 and environment.Time < 18.00 then
-			gFunc.Equip('Ear2', 'Fenrir\'s Earring');
-		end
 		if (player.SubJob == 'DRG') then
 			gFunc.Equip('Ear1', 'Wyvern Earring');
 		end
 		if cstance == 1 then
 			gFunc.EquipSet(sets.Tank);
 		end 
+		-- After cstance check so should apply even in tank mode
+		if environment.Time >= 6.0 and environment.Time < 18.00 then
+			gFunc.Equip('Ear2', 'Fenrir\'s Earring');
+		end
+		
 	elseif (player.Status == 'Resting') then
 		gFunc.EquipSet(sets.Resting);
 	else
