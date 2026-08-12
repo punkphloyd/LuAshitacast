@@ -52,7 +52,7 @@ local sets = {
 		Ring1 = 'Rajas Ring',
 		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
-		Waist = {'Brown Belt', 'Purple Belt'},
+		Waist = {'Black Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = 'Republic Subligar',
 		Feet = {'Fuma Kyahan', 'Fed. Kyahan'}
 	},
@@ -68,7 +68,7 @@ local sets = {
 		Ring1 = 'Rajas Ring',
 		Ring2 = 'Sniper\'s Ring +1',
 		Back = 'Nomad\'s Mantle',
-		Waist = 'Brown Belt',
+		Waist = 'Black Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Fuma Kyahan'
 	
@@ -214,7 +214,7 @@ local sets = {
 		Ring1 = {''},
 		Ring2 = {''},
 		Back = {''},
-		Waist = {''},
+		Waist = {'Black Belt'},
 		Legs = {'Temple Hose'},
 		Feet = {''}
 	},
@@ -230,7 +230,7 @@ local sets = {
 		Ring1 = {''},
 		Ring2 = {''},
 		Back = {''},
-		Waist = {''},
+		Waist = {'Black Belt'},
 		Legs = {''},
 		Feet = {''}
 	},
@@ -262,7 +262,7 @@ local sets = {
 		Ring1 = {''},
 		Ring2 = {''},
 		Back = {''},
-		Waist = {''},
+		Waist = {'Black Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = {'Byakko\'s Haidate'},
 		Feet = {''}
 	}
