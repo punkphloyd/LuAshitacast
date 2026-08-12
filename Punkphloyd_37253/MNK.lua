@@ -43,7 +43,7 @@ local sets = {
 	},
 	
 	TP_Priority = {
-		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
@@ -59,7 +59,7 @@ local sets = {
 	
 	Town_Priority = {
 	
-		Head = 'Emperor Hairpin',
+		Head = {'Optical Hat', 'Emperor Hairpin'},
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Wyvern Earring',
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
@@ -105,7 +105,7 @@ local sets = {
 	},
 	
 	Combo_Priority = {
-		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
@@ -121,10 +121,10 @@ local sets = {
 	},
 	
 	Raging_Priority = {
-		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
-		Ear2 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
+		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
+		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
@@ -137,10 +137,10 @@ local sets = {
 	},
 	
 	Howling_Priority = {
-		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Spike Earring', 'Tor. Earring +1'},
-		Ear2 = {'Spike Earring', 'Tor. Earring +1'},
+		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
+		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Pallas\'s Bracelets','Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
@@ -153,10 +153,10 @@ local sets = {
 	},
 	
 	DragonKick_Priority = {
-		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Spike Earring', 'Tor. Earring +1'},
-		Ear2 = {'Spike Earring', 'Tor. Earring +1'},
+		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
+		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Pallas\'s Bracelets','Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
@@ -169,7 +169,7 @@ local sets = {
 	},
 	
 	Asuran_Priority = {
-		Head = {'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Spike Earring', 'Tor. Earring +1'},
 		Ear2 = {'Spike Earring', 'Tor. Earring +1'},
@@ -185,9 +185,11 @@ local sets = {
 	},
 	
 	Chakra_Priority = {
+		Head = 'Feral Mask',
 		Body = {'Temple Cyclas', 'Custom Tunic'},
 		Ring1 = 'Vigor Ring',
 		Ring2 = 'Vigor Ring',
+		Back = 'Melee Cape',
 		Waist = 'Warrior\'s Belt +1',
 		Legs = 'Republic Subligar',
 	},
@@ -197,6 +199,7 @@ local sets = {
 		Neck = 'Justice Badge',
 		Hands = 'Devotee\'s Mitts',
 		Ring1 = 'Kshama Ring No.9',
+		Back = 'Melee Cape',
 		Legs = 'Custom Slacks'
 	},
 	
@@ -319,8 +322,13 @@ profile.HandleDefault = function()
 		return
 	end
 	
+    local environment = gData.GetEnvironment();
 	if (player.Status == 'Engaged') then
 		gFunc.EquipSet(sets.TP);
+		
+		if environment.Time >= 6.0 and environment.Time < 18.00 then
+			gFunc.Equip('Ear2', 'Fenrir\'s Earring');
+		end
 		if (player.SubJob == 'DRG') then
 			gFunc.Equip('Ear1', 'Wyvern Earring');
 		end

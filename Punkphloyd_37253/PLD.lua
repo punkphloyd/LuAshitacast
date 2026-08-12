@@ -88,7 +88,7 @@ local sets = {
 		Neck = 'Holy Phial',
 		Ear1 = 'Pigeon Earring',
 		Ear2 = 'Pigeon Earring',
-		Body = 'Custom Tunic',
+		Body = 'Gallant Surcoat',
 		Hands = 'Gallant Gauntlets',
 		Ring1 = 'Serket Ring',
 		Ring2 = 'Ether Ring',
@@ -279,8 +279,10 @@ profile.OnLoad = function()
 	
 	AshitaCore:GetChatManager():QueueCommand(-1, '/bind ^F9 /pld TPMode');
 	AshitaCore:GetChatManager():QueueCommand(-1, '/bind F12 /pld Report');
+	AshitaCore:GetChatManager():QueueCommand(-1, '/bind ^F12 /pld Refresh');
 	varhelper.Initialize();
 	varhelper.CreateToggle('WeaponLock',true);
+	varhelper.CreateToggle('RefreshLock',true);
 	varhelper.CreateCycle('TPMode', { [1] = 'Tank', [2] = 'DD', [3] = 'Hybrid'});
 	varhelper.CreateToggle('Efficiency', false);
 	
@@ -293,6 +295,7 @@ profile.OnUnload = function()
 
 	AshitaCore:GetChatManager():QueueCommand(-1, '/alias delete /pld');
 	AshitaCore:GetChatManager():QueueCommand(-1, '/unbind F12');
+	AshitaCore:GetChatManager():QueueCommand(-1, '/unbind ^F12');
 	AshitaCore:GetChatManager():QueueCommand(-1, '/unbind ^F9');
 
 	varhelper.Destroy();
@@ -311,6 +314,8 @@ profile.HandleCommand = function(args)
 		gFunc.Message('Efficiency Mode: ' .. tostring(varhelper.GetToggle('Efficiency')));
 	elseif(args[1] == 'Report') then
 		gFunc.Message('TP Mode (toggle w/ CTRL+F9): ' .. tostring(varhelper.GetCycle('TPMode')));
+	elseif(args[1] == 'Refresh') then
+		varhelper.AdvanceToggle('RefreshLock');
 	end
 
 end
@@ -345,6 +350,9 @@ profile.HandleDefault = function()
 		if player.MP > mp_thresholds[mode] then 
 				gFunc.EquipSet(mp_set_options[mode]);
 		end
+	end
+	if varhelper.GetToggle('RefreshLock') == true then
+		gFunc.Equip('Neck','Parade Gorget');
 	end
 end
 
