@@ -360,6 +360,8 @@ profile.HandleAbility = function()
 		gFunc.Equip('Head','Temple Crown');
 	elseif action.Name == 'Boost' then
 		gFunc.Equip('Hands','Temple Gloves');
+	elseif action.Name == 'Counterstance' then
+		gFunc.Equip('Hands','Melee Gaiters');
 	end
 
 end
