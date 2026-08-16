@@ -2,10 +2,11 @@ local profile = {};
 
 local varhelper = gFunc.LoadFile('common/varhelper.lua');
 
-local Settings = {
+local settings = {
 
 	
-	CurrentLevel = 0
+	CurrentLevel = 0,
+	guard_mode = false
 	
 };
 
@@ -84,7 +85,7 @@ local sets = {
 		Ring1 = 'Vigor Ring',
 		Ring2 = 'Vigor Ring',
 		Back = 'Nomad\'s Mantle',
-		Waist = 'Warrior\'s Belt +1',
+		Waist = 'Black Belt',
 		Legs = 'Crow Hose',
 		Feet = 'Air Solea'
 	},
@@ -265,6 +266,40 @@ local sets = {
 		Waist = {'Black Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = {'Byakko\'s Haidate'},
 		Feet = {''}
+	},
+	
+	Guard_Priority = {
+	
+		Head = {'Feral Mask'},
+		Neck = {'Guarding Torque'},
+		Ear1 = {'Drone Earring'},
+		Ear2 = {'Drone Earring'},
+		Body = {'Arhat\'s Gi +1'},
+		Hands = {'Dst. Mittens +1'},
+		Ring1 = {'Vigor Ring'},
+		Ring2 = {'Vigor Ring'},
+		Back = {'Melee Cape'},
+		Waist = {'Black Belt'},
+		Legs = {'Temple Hose'},
+		Feet = {'Melee Gaiters'}
+	
+	},
+	
+	Casting_Priority = {
+		
+		Head = {'Optical Hat'},
+		Neck = {'Guarding Torque'},
+		Ear1 = {'Dodge Earring'},
+		Ear2 = {'Dodge Earring'},
+		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
+		Hands = {'Dst. Mittens +1'},
+		Ring1 = {'Vigor Ring'},
+		Ring2 = {'Vigor Ring'},
+		Back = {'Nomad\'s Mantle'},
+		Waist = {'Black Belt', 'Brown Belt'},
+		Legs = {'Crow Hose'},
+		Feet = {'Fuma Kyahan'}
+	
 	}
 	
 };
@@ -300,14 +335,23 @@ profile.HandleCommand = function(args)
 		AshitaCore:GetChatManager():QueueCommand(1, '/macro set 1');
 		gFunc.Message('Crafting Mode: ' .. tostring(varhelper.GetToggle('CraftingMode')));
 	end
+	if(args[1] == 'guard') then
+		if settings.guard_mode then
+            settings.guard_mode = false;
+            gFunc.Echo(3, "Using guard mode disabled.");
+        else
+            settings.guard_mode = true;
+            gFunc.Echo(3, "Using guard mode enabled.");
+        end
+	end
 end
 
 profile.HandleDefault = function()
 	local zone = gData.GetEnvironment();
 	local mylevel = AshitaCore:GetMemoryManager():GetPlayer():GetMainJobLevel();
-	if (mylevel ~= Settings.CurrentLevel) then
+	if (mylevel ~= settings.CurrentLevel) then
 		gFunc.EvaluateLevels(profile.Sets, mylevel);
-		Settings.CurrentLevel = mylevel;
+		settings.CurrentLevel = mylevel;
 	end
 	local player = gData.GetPlayer();
 	
@@ -333,8 +377,12 @@ profile.HandleDefault = function()
 			gFunc.EquipSet(sets.Tank);
 		end 
 		-- After cstance check so should apply even in tank mode
-		if environment.Time >= 6.0 and environment.Time < 18.00 then
+		if environment.Time >= 6.0 and environment.Time < 18.00 and mylevel >= 70 then
 			gFunc.Equip('Ear2', 'Fenrir\'s Earring');
+		end
+		
+		if settings.guard_mode then
+			gFunc.EquipSet(sets.Guard)
 		end
 		
 	elseif (player.Status == 'Resting') then
@@ -378,6 +426,16 @@ profile.HandleWeaponskill = function()
 		gFunc.Echo(3,'Howling Fist condition entered');
 		gFunc.EquipSet(sets.Howling);
 	end
+end
+
+profile.HandlePrecast = function()
+	local spell = gData.GetAction();
+	gFunc.EquipSet(sets.Casting);
+end
+
+
+profile.HandleMidcast = function()
+	gFunc.EquipSet(sets.Casting);
 end
 
 return profile;
