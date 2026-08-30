@@ -425,6 +425,12 @@ profile.HandleWeaponskill = function()
 	elseif action.Name == 'Howling Fist' then
 		gFunc.Echo(3,'Howling Fist condition entered');
 		gFunc.EquipSet(sets.Howling);
+	elseif action.Name == 'Dragon Kick' then
+		gFunc.Echo(3,'Dragon Kick condition entered');
+		gFunc.EquipSet(sets.DragonKick);
+	elseif action.Name == 'Asuran Fists' then
+		gFunc.Echo(3,'Asuran Fists condition entered');
+		gFunc.EquipSet(sets.Asuran);
 	end
 end
 

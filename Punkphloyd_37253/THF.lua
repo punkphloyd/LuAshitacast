@@ -64,7 +64,7 @@ local sets = {
 	Idle_Priority = {
 	
 		Head = 'Optical Hat',
-		Neck = 'Jeweled Torque',
+		Neck = 'Jeweled Collar',
 		Ear1 = 'Dodge Earring',
 		Ear2 = 'Dodge Earring',
 		Body = 'Scp. Harness +1',
