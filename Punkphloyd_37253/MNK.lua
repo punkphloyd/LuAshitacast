@@ -44,7 +44,7 @@ local sets = {
 	},
 	
 	TP_Priority = {
-		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
+		Head = {'Panther Mask +1', 'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
@@ -192,7 +192,7 @@ local sets = {
 		Ring2 = 'Vigor Ring',
 		Back = 'Melee Cape',
 		Waist = {'Warwolf Belt',  'Warrior\'s Belt +1'},
-		Legs = 'Republic Subligar',
+		Legs = 'Mst. Sitabaki +1',
 	},
 	
 	ChiBlast = {
@@ -217,7 +217,7 @@ local sets = {
 		Back = {''},
 		Waist = {'Black Belt'},
 		Legs = {'Temple Hose'},
-		Feet = {'Melee Gaiters'}
+		Feet = {'Rst. Sune-Ate +1'}
 	},
 	
 	PDT_Priority = {
