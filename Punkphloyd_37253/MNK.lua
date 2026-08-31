@@ -222,11 +222,12 @@ local sets = {
 	
 	PDT_Priority = {
 	
-		Head = {''},
+
+		Head = {'Arh. Jinpachi +1'},
 		Neck = {'Peacock Amulet'},
 		Ear1 = {''},
 		Ear2 = {''},
-		Body = {''},
+		Body = {'Arhat\'s Gi +1'},
 		Hands = {''},
 		Ring1 = {''},
 		Ring2 = {''},
