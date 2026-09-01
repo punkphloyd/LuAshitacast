@@ -188,6 +188,7 @@ local sets = {
 	Chakra_Priority = {
 		Head = 'Feral Mask',
 		Body = {'Temple Cyclas', 'Custom Tunic'},
+		Hands = 'Melee Gloves',
 		Ring1 = 'Vigor Ring',
 		Ring2 = 'Vigor Ring',
 		Back = 'Melee Cape',
