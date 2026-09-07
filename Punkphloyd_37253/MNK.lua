@@ -87,7 +87,7 @@ local sets = {
 		Back = 'Nomad\'s Mantle',
 		Waist = 'Black Belt',
 		Legs = 'Crow Hose',
-		Feet = 'Air Solea'
+		Feet = 'Rst. Sune-ate +1'
 	},
 	
 	Resting_Priority = {
@@ -117,7 +117,7 @@ local sets = {
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
 		Waist = {'Brown Belt', 'Purple Belt'},
 		Legs = 'Republic Subligar',
-		Feet = {'Fed. Kyahan'}
+		Feet = {'Rst. Sune-ate +1', 'Fed. Kyahan'}
 	
 	},
 	
@@ -133,7 +133,7 @@ local sets = {
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
 		Waist = {'Life Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = 'Republic Subligar',
-		Feet = {'Fed. Kyahan'}
+		Feet = {'Rst. Sune-ate +1', 'Fed. Kyahan'}
 	
 	},
 	
@@ -149,7 +149,7 @@ local sets = {
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
 		Waist = {'Life Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = 'Republic Subligar',
-		Feet = {'Fed. Kyahan'}
+		Feet = {'Rst. Sune-ate +1', 'Fed. Kyahan'}
 	
 	},
 	
@@ -165,7 +165,7 @@ local sets = {
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
 		Waist = {'Life Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = 'Republic Subligar',
-		Feet = {'Fed. Kyahan'}
+		Feet = {'Rst. Sune-ate +1', 'Fed. Kyahan'}
 	
 	},
 	
@@ -181,7 +181,7 @@ local sets = {
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
 		Waist = {'Life Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = 'Republic Subligar',
-		Feet = {'Fed. Kyahan'}
+		Feet = {'Rst. Sune-ate +1', 'Fed. Kyahan'}
 	
 	},
 	
@@ -256,7 +256,7 @@ local sets = {
 	
 	Haste_Priority = {
 	
-		Head = {''},
+		Head = {'Panther Mask +1'},
 		Neck = {'Peacock Amulet'},
 		Ear1 = {''},
 		Ear2 = {''},
@@ -267,7 +267,7 @@ local sets = {
 		Back = {''},
 		Waist = {'Black Belt', 'Brown Belt', 'Purple Belt'},
 		Legs = {'Byakko\'s Haidate'},
-		Feet = {''}
+		Feet = {'Fuma Kyahan'}
 	},
 	
 	Guard_Priority = {
@@ -278,8 +278,8 @@ local sets = {
 		Ear2 = {'Drone Earring'},
 		Body = {'Arhat\'s Gi +1'},
 		Hands = {'Dst. Mittens +1'},
-		Ring1 = {'Vigor Ring'},
-		Ring2 = {'Vigor Ring'},
+		Ring1 = {'Soil Ring'},
+		Ring2 = {'Soil Ring'},
 		Back = {'Melee Cape'},
 		Waist = {'Black Belt'},
 		Legs = {'Temple Hose'},
@@ -291,12 +291,12 @@ local sets = {
 		
 		Head = {'Optical Hat'},
 		Neck = {'Guarding Torque'},
-		Ear1 = {'Dodge Earring'},
+		Ear1 = {'Loquac. Earring'},
 		Ear2 = {'Dodge Earring'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Dst. Mittens +1'},
-		Ring1 = {'Vigor Ring'},
-		Ring2 = {'Vigor Ring'},
+		Ring1 = {'Soil Ring'},
+		Ring2 = {'Soil Ring'},
 		Back = {'Nomad\'s Mantle'},
 		Waist = {'Black Belt', 'Brown Belt'},
 		Legs = {'Crow Hose'},
