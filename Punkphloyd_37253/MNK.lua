@@ -45,7 +45,7 @@ local sets = {
 	
 	TP_Priority = {
 		Head = {'Panther Mask +1', 'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
-		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Neck = {'Faith Torque', 'Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
@@ -107,7 +107,7 @@ local sets = {
 	
 	Combo_Priority = {
 		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
-		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Neck = {'Faith Torque', 'Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
@@ -123,7 +123,7 @@ local sets = {
 	
 	Raging_Priority = {
 		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
-		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Neck = {'Faith Torque','Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
@@ -139,7 +139,7 @@ local sets = {
 	
 	Howling_Priority = {
 		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
-		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Neck = {'Faith Torque','Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
@@ -155,7 +155,7 @@ local sets = {
 	
 	DragonKick_Priority = {
 		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
-		Neck = {'Peacock Amulet', 'Spike Necklace'},
+		Neck = {'Faith Torque','Peacock Amulet', 'Spike Necklace'},
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
@@ -171,9 +171,9 @@ local sets = {
 	
 	Asuran_Priority = {
 		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
-		Neck = {'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Spike Earring', 'Tor. Earring +1'},
-		Ear2 = {'Spike Earring', 'Tor. Earring +1'},
+		Neck = {'Faith Torque', 'Peacock Amulet', 'Spike Necklace'},
+		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
+		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Pallas\'s Bracelets','Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
