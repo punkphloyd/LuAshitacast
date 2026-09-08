@@ -6,7 +6,8 @@ local settings = {
 
 	
 	CurrentLevel = 0,
-	guard_mode = false
+	guard_mode = false,
+	area_owned = false
 	
 };
 
@@ -64,7 +65,7 @@ local sets = {
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Wyvern Earring',
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
-		Body = 'Scp. Harness +1',
+		Body = 'Melee Cyclas',
 		Hands = 'Ochiudo\'s Kote',
 		Ring1 = 'Rajas Ring',
 		Ring2 = 'Sniper\'s Ring +1',
@@ -80,7 +81,7 @@ local sets = {
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Dodge Earring',
 		Ear2 = 'Dodge Earring',
-		Body = 'Scp. Harness +1',
+		Body = 'Melee Cyclas',
 		Hands = {'Dst. Mittens +1', 'Custom M Gloves'},
 		Ring1 = 'Soil Ring',
 		Ring2 = 'Soil Ring',
@@ -95,11 +96,11 @@ local sets = {
 		Neck = '',
 		Ear1 = '',
 		Ear2 = '',
-		Body = '',
+		Body = 'Melee Cyclas',
 		Hands = '',
 		Ring1 = '',
 		Ring2 = '',
-		Back = '',
+		Back = 'Melee Cape',
 		Waist = '',
 		Legs = '',
 		Feet = ''
@@ -217,7 +218,7 @@ local sets = {
 		Ring2 = {''},
 		Back = {''},
 		Waist = {'Black Belt'},
-		Legs = {'Temple Hose'},
+		Legs = {'Tpl. Hose +1'},
 		Feet = {'Rst. Sune-Ate +1'}
 	},
 	
@@ -282,7 +283,7 @@ local sets = {
 		Ring2 = {'Soil Ring'},
 		Back = {'Melee Cape'},
 		Waist = {'Black Belt'},
-		Legs = {'Temple Hose'},
+		Legs = {'Tpl. Hose +1'},
 		Feet = {'Melee Gaiters'}
 	
 	},
@@ -346,6 +347,16 @@ profile.HandleCommand = function(args)
             gFunc.Echo(3, "Using guard mode enabled.");
         end
 	end
+	
+	if(args[1] == 'conquest') then
+		if settings.area_owned then
+            settings.area_owned = false;
+            gFunc.Echo(3, "Conquest area unowned.");
+        else
+            settings.area_owned = true;
+            gFunc.Echo(3, "Conquest area owned.");
+        end
+	end
 end
 
 profile.HandleDefault = function()
@@ -391,6 +402,12 @@ profile.HandleDefault = function()
 		gFunc.EquipSet(sets.Resting);
 	else
 		gFunc.EquipSet(sets.Idle);
+		if environment.Time >= 6.0 and environment.Time < 18.00 and mylevel >= 63 then
+			gFunc.Equip('Hands', 'Garden Bangles');
+		end
+		if not settings.area_owned then
+			gFunc.Equip("Head","President. Hairpin")
+		end
 	end
 	
 end
