@@ -47,15 +47,15 @@ local sets = {
 	TP_Priority = {
 		Head = {'Panther Mask +1', 'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Faith Torque', 'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
+		Ear1 = {'Brutal Earring', 'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
-		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
+		Body = {'Kirin\'s Osode', 'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
 		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
 		Waist = {'Black Belt', 'Brown Belt', 'Purple Belt'},
-		Legs = 'Republic Subligar',
+		Legs = {'Byakko\'s Haidate', 'Republic Subligar'},
 		Feet = {'Fuma Kyahan', 'Fed. Kyahan'}
 	},
 	
@@ -71,7 +71,7 @@ local sets = {
 		Ring2 = 'Sniper\'s Ring +1',
 		Back = 'Nomad\'s Mantle',
 		Waist = 'Black Belt',
-		Legs = 'Republic Subligar',
+		Legs = 'Byakko\'s Haidate',
 		Feet = 'Fuma Kyahan'
 	
 	},
@@ -173,7 +173,7 @@ local sets = {
 	Asuran_Priority = {
 		Head = {'Optical Hat', 'Temple Crown', 'Emperor Hairpin'},
 		Neck = {'Faith Torque', 'Peacock Amulet', 'Spike Necklace'},
-		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
+		Ear1 = {'Triumph Earring', 'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
 		Hands = {'Pallas\'s Bracelets','Ochiudo\'s Kote', 'Custom M Gloves'},
@@ -187,7 +187,7 @@ local sets = {
 	},
 	
 	Chakra_Priority = {
-		Head = 'Feral Mask',
+		Head = {'Genbu\'s Kabuto', 'Feral Mask'},
 		Body = {'Temple Cyclas', 'Custom Tunic'},
 		Hands = 'Melee Gloves',
 		Ring1 = {'Soil Ring', 'Vigor Ring'},
@@ -300,7 +300,7 @@ local sets = {
 		Ring2 = {'Soil Ring'},
 		Back = {'Nomad\'s Mantle'},
 		Waist = {'Black Belt', 'Brown Belt'},
-		Legs = {'Crow Hose'},
+		Legs = {'Byakko\'s Haidate', 'Crow Hose'},
 		Feet = {'Fuma Kyahan'}
 	
 	}
