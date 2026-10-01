@@ -50,7 +50,7 @@ local sets = {
 		Ear1 = {'Brutal Earring', 'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Kirin\'s Osode', 'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
-		Hands = {'Ochiudo\'s Kote', 'Custom M Gloves'},
+		Hands = {'Mel. Gloves +1', 'Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
 		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
@@ -66,7 +66,7 @@ local sets = {
 		Ear1 = 'Wyvern Earring',
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = 'Melee Cyclas',
-		Hands = 'Ochiudo\'s Kote',
+		Hands = 'Mel. Gloves +1',
 		Ring1 = 'Rajas Ring',
 		Ring2 = 'Sniper\'s Ring +1',
 		Back = 'Nomad\'s Mantle',
@@ -112,7 +112,7 @@ local sets = {
 		Ear1 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
-		Hands = {'Ochiudo\'s Kote', 'Custom M Gloves'},
+		Hands = {'Mel. Gloves +1', 'Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
 		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
@@ -128,7 +128,7 @@ local sets = {
 		Ear1 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Ear2 = {'Merman\'s Earring', 'Spike Earring', 'Tor. Earring +1', 'Beetle Earring +1'},
 		Body = {'Scp. Harness +1', 'Jujitsu Gi', 'Power Gi'},
-		Hands = {'Ochiudo\'s Kote', 'Custom M Gloves'},
+		Hands = {'Mel. Gloves +1', 'Ochiudo\'s Kote', 'Custom M Gloves'},
 		Ring1 = 'Rajas Ring',
 		Ring2 = {'Sniper\'s Ring +1', 'Venerer Ring', 'Courage Ring'},
 		Back = {'Amemet Mantle +1', 'Jaguar Mantle', 'Nomad\'s Mantle'},
@@ -303,7 +303,13 @@ local sets = {
 		Legs = {'Byakko\'s Haidate', 'Crow Hose'},
 		Feet = {'Fuma Kyahan'}
 	
-	}
+	},
+	
+	Crafting = {
+		Head = 'Shaded Specs.',
+		Body = 'Blacksmith\'s Apn.',
+		Hands = 'Smithy\'s Mitts'
+	},
 	
 };
 
@@ -357,6 +363,8 @@ profile.HandleCommand = function(args)
             gFunc.Echo(3, "Conquest area owned.");
         end
 	end
+	
+	
 end
 
 profile.HandleDefault = function()
@@ -371,6 +379,10 @@ profile.HandleDefault = function()
 	local cstance = gData.GetBuffCount('Counterstance');
 	if (zone.Area ~= nil and Towns:contains(zone.Area)) then
 		gFunc.EquipSet(sets.Town)
+		if(varhelper.GetToggle('CraftingMode') == true) then
+			gFunc.EquipSet(sets.Crafting);
+			return
+		end
 		return
 	end
 	
